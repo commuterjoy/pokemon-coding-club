@@ -1,0 +1,2 @@
+- [ ] Use a proper data binding library
+- [ ] Flip a card - https://davidwalsh.name/css-flip

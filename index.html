@@ -1,0 +1,116 @@
+<style>
+
+	.canvas {
+		margin: 0px;
+		height: 192px;
+		width: 192px;
+		position: relative;
+		display: inline-block;
+	}
+
+	.canvas img {
+		display: block;
+		position: absolute;
+	}
+
+	name {
+		padding: 8px;
+		content: attr(data-name);
+		display: block;
+		top: 0;
+		left: 0;
+		position: absolute;
+		font-size: 20px;
+		line-height: 20px;
+		font-family: sans-serif;
+	}
+
+	cp {
+		padding: 8px;
+		content: attr(data-name);
+		display: inline-block;
+		top: 0;
+		right: 0;
+		background-color: #333333;
+		color: #ffffff;
+		text-shadow: 1px 1px #000000;
+		position: absolute;
+		font-size: 14px;
+		line-height: 20px;
+		font-family: sans-serif;
+	}
+
+	.face-right {
+		transform: scaleX(-1);
+	}
+
+	img[src*=stand] {
+		margin-top: 103px;
+		margin-left: 80px;
+	}
+
+	pokemon:hover {
+		background: #eeeeee;
+	}
+
+</style>
+
+<div id="canvas"></div>
+
+<script>
+
+class Pikachu {
+
+	constructor(name) {
+		this.image = new Image();
+		this.tag = document.createElement('name');
+		this.power = document.createElement('cp');
+		const e = document.createElement('pokemon');
+		e.classList.add('canvas');
+		e.appendChild(this.image);
+		e.appendChild(this.tag);
+		e.appendChild(this.power);
+		this.cp(1423)
+		document.body.appendChild(e);
+		this.stand();
+	}
+
+	name(name) {
+		this.tag.textContent = name;
+	}
+
+	cp(n) {
+		this.power.textContent = `CP: ${n}`;
+	}
+
+	rotate() {
+		this.image.classList.toggle('face-right');
+	}
+
+	stand() {
+		this.image.src = './pokemon/pikachu/stand.gif';
+	}
+
+	jump() {
+		this.image.src = './pokemon/pikachu/jump.gif';
+	}
+
+	flip() {
+		this.image.src = './pokemon/pikachu/flip.gif';
+	}
+
+	crouch() {
+		this.image.src = './pokemon/pikachu/crouch.gif';
+	}
+
+	pounce() {
+		this.image.src = './pokemon/pikachu/pounce.gif';
+	}
+
+}
+
+p = new Pikachu();
+p.stand();
+
+</script>
+
