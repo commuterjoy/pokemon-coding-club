@@ -1,0 +1,52 @@
+card {
+	margin: 10px;
+	height: 192px;
+	width: 192px;
+	position: relative;
+	display: inline-block;
+}
+
+card img {
+	display: block;
+	position: absolute;
+}
+
+name {
+	padding: 8px;
+	content: attr(data-name);
+	display: block;
+	top: 0;
+	left: 0;
+	position: absolute;
+	font-size: 20px;
+	line-height: 20px;
+	font-family: sans-serif;
+}
+
+cp {
+	padding: 8px;
+	content: attr(data-name);
+	display: inline-block;
+	top: 0;
+	right: 0;
+	background-color: #333333;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	position: absolute;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: sans-serif;
+}
+
+[data-rotate=right] {
+	transform: scaleX(-1);
+}
+
+img[src*=stand] {
+	margin-top: 103px;
+	margin-left: 80px;
+}
+
+card:hover {
+	background: #eeeeee;
+}
