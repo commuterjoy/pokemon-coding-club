@@ -2,7 +2,7 @@ Teaching my (6 year old son) how to code.
 
 ----
 
-Make some Pikachu's,
+Make some Pikachus,
 
 ```
 p1 = pikachu();
