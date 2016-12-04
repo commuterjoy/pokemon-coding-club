@@ -23,6 +23,10 @@ name {
 	font-family: sans-serif;
 }
 
+.highlight {
+	background-color: crimson;	
+}
+
 cp {
 	padding: 8px;
 	content: attr(data-name);
