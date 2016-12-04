@@ -3,7 +3,7 @@ class Pokemon {
 	constructor(name) {
 
 		this.card = document.createElement('card');
-		document.body.appendChild(this.card);
+		document.querySelector('game').appendChild(this.card);
 
 		this.template = '<cp>CP: {{power}}</cp>' +
 						'<name>{{n}}</name>' +

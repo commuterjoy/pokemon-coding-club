@@ -1,3 +1,16 @@
+function forEach(callback, array, ...params) {
+    for (var i = 0; i < array.length; i = i + 1) {
+		callback(array[i], ...params);
+    }
+}
+
+clear = () => {	
+	const game = document.querySelector('game')
+	while (game.firstChild) {
+	    game.removeChild(game.firstChild);
+	}
+}
+
 const addHealth = (pokemon, points) => {
 	pokemon.cp = pokemon.cp + points
 }

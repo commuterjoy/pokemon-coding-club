@@ -1,3 +1,7 @@
+button {
+	display: block;
+}
+
 card {
 	margin: 10px;
 	height: 192px;
