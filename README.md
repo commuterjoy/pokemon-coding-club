@@ -25,11 +25,11 @@ addHealth(p1, 50)
 Or increase the health points of a batch of Pokemon by '50',
 
 ```
-forEach(addHealth, [p1, p2], 50)
+forEach(addHealth, [p1, p2, p3], 50)
 ```
 
 A little game where we get 5 seconds to pick which Pikachu will randomly flip,
 
 ```
-randomlyFlip([p1, p2, p3], seconds(5))
+after(seconds(2), randomlyFlip, p1, p2, p3)
 ```
