@@ -46,9 +46,19 @@ cp {
 	transform: scaleX(-1);
 }
 
-img[src*=stand] {
+img[src*='pikachu/stand'] {
 	margin-top: 103px;
 	margin-left: 80px;
+}
+
+img[src*='blastoise/stand'] {
+	margin-top: 81px;
+	margin-left: 44px;
+}
+
+img[src*='raichu/stand'] {
+	margin-top: 65px;
+	margin-left: 70px;
 }
 
 card:hover {

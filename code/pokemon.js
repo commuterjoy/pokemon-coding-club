@@ -1,4 +1,4 @@
-class Raichu {
+class Pokemon {
 
 	constructor(name) {
 
@@ -9,14 +9,14 @@ class Raichu {
 						'<name>{{n}}</name>' +
 						'<img src="{{{image}}}" data-rotate="{{rotated}}"/>'
 		this.cp = 0;
-		this.sprite = '';
+		this.sprite = 'stand';
 		this.rotated = 'left';
-		this.stand();
 	}
 
 	render () {
 		Mustache.parse(this.template);
 		var rendered = Mustache.render(this.template, this);
+		// console.log(rendered);
 		this.card.innerHTML = rendered;
 	}
 
@@ -30,8 +30,12 @@ class Raichu {
 		this.render();
 	}
 
-	set sprite(n) {
-		this.image = n;
+	get cp() {
+		return this.power;
+	}
+	
+	set sprite(s) {
+		this.image = `./pokemon/pikachu/${s}.gif`;
 		this.render();
 	}
 
@@ -40,17 +44,14 @@ class Raichu {
 		this.render();
 	}
 
-	stand() {
-		this.sprite = './pokemon/raichu/stand.gif';
+	highlight() {
+		this.card.classList.add('highlight')
+		this.render();
 	}
 
-	tailwhip() {
-		this.sprite = './pokemon/raichu/tailwhip.gif';
+	unhighlight() {
+		this.card.classList.remove('highlight')
+		this.render();
 	}
-
-	thundershot() {
-		this.sprite = './pokemon/raichu/thundershot.gif';
-	}
-
 
 }

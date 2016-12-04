@@ -3,53 +3,8 @@
 @import url(style.css)
 </style>
 <script src="libraries/mustache.js"></script>
-<script src="pikachu.js"></script>
-<script src="raichu.js"></script>
-<script src="blastoise.js"></script>
-<script src="venusaur.js"></script>
-<script>
-
-const pikachu = () => new Pikachu();
-
-const addHealth = (pokemon, points) => {
-	pokemon.cp = pokemon.cp + points
-}
-
-const stand = (pokemon) => {
-	pokemon.sprite = 'stand'
-}
-
-const jump = (pokemon) => {
-	pokemon.sprite = 'jump'
-}
-
-const flip = (pokemon) => {
-	pokemon.sprite = 'flip'
-}
-
-const crouch = (pokemon) => {
-	pokemon.sprite = 'crouch'
-}
-
-const pounce = (pokemon) => {
-	pokemon.sprite = 'pounce'
-}
-
-const rotate = (pokemon, direction) => {
-	pokemon.rotate(direction);
-}
-
-const highlight = (pokemon) => {
-	pokemon.highlight();
-}
-
-const randomlyFlip = (pokemons, after = 3000) => {
-	const r = Math.floor(Math.random() * pokemons.length);
-	setTimeout(() => {
-		flip(pokemons[r])
-		highlight(pokemons[r])	
-	}, after)
-}
-
-</script>
-
+<script src="code/pokemon.js"></script>
+<script src="code/pikachu.js"></script>
+<script src="code/raichu.js"></script>
+<script src="code/blastoise.js"></script>
+<script src="code/actions.js"></script>
