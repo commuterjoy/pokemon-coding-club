@@ -33,3 +33,10 @@ A little game where we get 5 seconds to pick which Pikachu will randomly flip,
 ```
 after(seconds(2), randomlyFlip, p1, p2, p3)
 ```
+
+... and reset it,
+
+
+```
+forEach(stand, [p1, p2, p3])
+```
