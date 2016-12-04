@@ -63,11 +63,12 @@ const thundershot = (pokemon) => {
 	pokemon.sprite = 'thundershot';
 }
 
-const randomlyFlip = (pokemons, after = 3000) => {
+const randomlyFlip = (pokemons) => {
 	const r = Math.floor(Math.random() * pokemons.length);
-	setTimeout(() => {
-		flip(pokemons[r])
-		highlight(pokemons[r])	
-	}, after)
+	flip(pokemons[r])
+	highlight(pokemons[r])	
 }
 
+const seconds = (n) => n * 1000;
+
+const after = (n, callback, ...params) => setTimeout(() => callback(params), n);
