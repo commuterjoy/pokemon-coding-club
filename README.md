@@ -1,4 +1,4 @@
-Teaching my (6 year old son) how to code.
+Teaching my (6 year old) son how to code.
 
 ----
 
@@ -31,7 +31,7 @@ forEach(addHealth, [p1, p2, p3], 50)
 A little game where we get 5 seconds to pick which Pikachu will randomly flip,
 
 ```
-after(seconds(2), randomlyFlip, p1, p2, p3)
+after(seconds(5), randomlyFlip, p1, p2, p3)
 ```
 
 ... and reset it,
